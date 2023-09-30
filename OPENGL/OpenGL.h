@@ -232,13 +232,11 @@ namespace mge
 
             //Create IBO
             //IndexBuffer rectangle_ib(indecies, sizeof(indecies) / sizeof(UINT32));
-            mge::Mat4 proj_rel(MatPreType::IDEN);
-            mge::Mat4 proj_3drel(MatPreType::IDEN);
-            mge::setOrtho(proj_rel, 0.f, m_size.x, m_size.y, 0.f, 0.f, 1.f);
-            mge::setOrtho(proj_3drel, 0.f, m_size.x, m_size.y, 0.f, 0.f, m_size.x);
+            mge::Mat4 projectionMatrix(MatPreType::IDEN);
+            mge::setOrtho(projectionMatrix, 0.f, m_size.x, m_size.y, 0.f, 0.f, 1.f);
             Camera camera(m_size.x, m_size.y, glm::vec3(0.f, 64.f, 0.f), 70.f);
             textShader.Bind();
-            textShader.SetUniformMatrix4fv("u_MVP", proj_rel);
+            textShader.SetUniformMatrix4fv("u_MVP", projectionMatrix);
 
             const float letter_size = getSizeByScaleToY(0.03f);
             const float offset_size = 100.f;
@@ -339,19 +337,8 @@ namespace mge
                 glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
                 glEnable(GL_DEPTH_TEST); 
 
-                //for (unsigned int i = 0; i < xChunks; i++)
-                //{
-                //    for (unsigned int k = 0; k < yChunks; k++)
-                //    {
-                //        chunks.at(i * xChunks + k).preRenderUpdate();
-                //        renderer.Draw(chunks.at(i * xChunks + k).m_chunkArray, chunks.at(i * xChunks + k).m_chunkIndexBuffer, d3_triangles, chunks.at(i * xChunks + k).m_indeces.size());
-                //    }
-                //}
                 chunk.preRenderUpdate();
                 renderer.Draw(chunk.m_chunkArray, chunk.m_chunkIndexBuffer, d3_triangles, chunk.m_indeces.size());
-                //renderer.Draw(chunk_00.m_chunkArray, chunk_00.m_chunkIndexBuffer, d3_triangles, chunk_00.m_indeces.size());
-                //renderer.Draw(chunk_0_0.m_chunkArray, chunk_0_0.m_chunkIndexBuffer, d3_triangles, chunk_0_0.m_indeces.size());
-                //renderer.Draw(chunk0_0.m_chunkArray, chunk0_0.m_chunkIndexBuffer, d3_triangles, chunk0_0.m_indeces.size());
 
                 // Turn off Z buffer for text Rendering
                 glDisable(GL_DEPTH_TEST);
