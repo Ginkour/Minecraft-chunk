@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Other">
+      <UniqueIdentifier>{fde7b177-7a28-406c-8322-8b7aeff533ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities">
+      <UniqueIdentifier>{8609bc33-926b-4761-9f6b-29d0f4c97a53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Container">
+      <UniqueIdentifier>{908e8a2c-dd80-47d6-95b9-8a3df1148130}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Matrix">
+      <UniqueIdentifier>{2fd09e64-b3a7-4428-8260-4815ac1f31bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\OpenGL">
+      <UniqueIdentifier>{17adbb8d-0a07-4e26-a4da-07f995ed32bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Timer">
+      <UniqueIdentifier>{78d1c75d-db84-4bd1-b4bd-46a171c95e4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders">
+      <UniqueIdentifier>{c14f5d8e-95d4-4dbb-934c-e6ef0ddce328}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Renderer">
+      <UniqueIdentifier>{dc99ab6b-6729-469a-82c4-e9bdd66ed8eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\VertexBuffer">
+      <UniqueIdentifier>{b280070a-9c64-490d-abed-ead439570c8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\VertexArray">
+      <UniqueIdentifier>{754ec359-fc74-47e3-bdb8-e91e1a1c2205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\VertexBufferLayout">
+      <UniqueIdentifier>{50afab86-9671-4bfc-b794-8b1f89772826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Shader">
+      <UniqueIdentifier>{9dc99b73-4b9f-4364-b5f3-c95c264eb91f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\IndexBuffer">
+      <UniqueIdentifier>{aaba2582-637b-4ccd-a7d7-392f588784cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Utilities\Texture">
+      <UniqueIdentifier>{3c2c76fb-76d6-4b83-b4ac-70d7efd92f98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{53c2ba63-6e2e-48b6-918a-8797e655cb9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Window">
+      <UniqueIdentifier>{8f9f2be9-78bb-45ce-84a5-650174875cda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Camera">
+      <UniqueIdentifier>{d2bb4f80-6433-4ac5-8490-7b2c03951efe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Objects">
+      <UniqueIdentifier>{72464535-9371-4316-b0f0-ce86d5303984}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Objects\Rectangle">
+      <UniqueIdentifier>{6fb8a128-6759-44c9-9530-f7809d47b416}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Vertex2D">
+      <UniqueIdentifier>{233f4f90-f28f-4559-b2cd-f796a80e19fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Text">
+      <UniqueIdentifier>{d71ad224-3ba3-46ff-a505-78d364583800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\3d">
+      <UniqueIdentifier>{cdc61b03-471c-4311-a1a0-5ab4db001616}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\textRenderer">
+      <UniqueIdentifier>{dc554ba9-e18b-464e-a773-9769e0f6d10c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\rectangle">
+      <UniqueIdentifier>{d389ec8a-e311-4c8b-8ace-ea6cf002ff22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Mesh">
+      <UniqueIdentifier>{9fb67de8-bcd3-4893-92a1-8a3da60e10d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Chunk">
+      <UniqueIdentifier>{6144b628-10a8-43c9-bb0f-2d08dcefa487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\ChunkMesh">
+      <UniqueIdentifier>{844c559d-703c-465e-8d3c-65aedce6a084}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shaders\chunkRenderer">
+      <UniqueIdentifier>{99e3a8ed-c351-4aaa-808c-02fae540429f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Container.cpp">
+      <Filter>Utilities\Container</Filter>
+    </ClCompile>
+    <ClCompile Include="Matrix.cpp">
+      <Filter>Utilities\Matrix</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Utilities\Timer</Filter>
+    </ClCompile>
+    <ClCompile Include="IndexBuffer.cpp">
+      <Filter>Utilities\IndexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBuffer.cpp">
+      <Filter>Utilities\VertexBuffer</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexBufferLayout.cpp">
+      <Filter>Utilities\VertexBufferLayout</Filter>
+    </ClCompile>
+    <ClCompile Include="VertexArray.cpp">
+      <Filter>Utilities\VertexArray</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Utilities\Renderer</Filter>
+    </ClCompile>
+    <ClCompile Include="Utilities.cpp">
+      <Filter>Utilities</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Utilities\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGL.cpp">
+      <Filter>Utilities\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="stb_image.cpp">
+      <Filter>Other</Filter>
+    </ClCompile>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Utilities\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="Rectangle.cpp">
+      <Filter>Graphics\Objects\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera2D.cpp">
+      <Filter>Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Graphics\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Vertex_Array.h">
+      <Filter>Graphics\Vertex2D</Filter>
+    </ClCompile>
+    <ClCompile Include="Text.cpp">
+      <Filter>Graphics\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="TextRect.cpp">
+      <Filter>Graphics\Text</Filter>
+    </ClCompile>
+    <ClCompile Include="Chunk.cpp">
+      <Filter>Graphics\Chunk</Filter>
+    </ClCompile>
+    <ClCompile Include="ChunkMesh.cpp">
+      <Filter>Graphics\ChunkMesh</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Dependencies\other\stb_image.h">
+      <Filter>Other</Filter>
+    </ClInclude>
+    <ClInclude Include="Container.h">
+      <Filter>Utilities\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="Matrix.h">
+      <Filter>Utilities\Matrix</Filter>
+    </ClInclude>
+    <ClInclude Include="typedefs.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Utilities\Timer</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexBuffer.h">
+      <Filter>Utilities\IndexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBuffer.h">
+      <Filter>Utilities\VertexBuffer</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexBufferLayout.h">
+      <Filter>Utilities\VertexBufferLayout</Filter>
+    </ClInclude>
+    <ClInclude Include="VertexArray.h">
+      <Filter>Utilities\VertexArray</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Utilities\Renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Utilities.h">
+      <Filter>Utilities</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Utilities\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGL.h">
+      <Filter>Utilities\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.h">
+      <Filter>Utilities\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Rectangle.h">
+      <Filter>Graphics\Objects\Rectangle</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera2D.h">
+      <Filter>Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Graphics\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Vertex.h">
+      <Filter>Graphics\Vertex2D</Filter>
+    </ClInclude>
+    <ClInclude Include="Text.h">
+      <Filter>Graphics\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="TextRect.h">
+      <Filter>Graphics\Text</Filter>
+    </ClInclude>
+    <ClInclude Include="Chunk.h">
+      <Filter>Graphics\Chunk</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkMesh.h">
+      <Filter>Graphics\ChunkMesh</Filter>
+    </ClInclude>
+    <ClInclude Include="ChunkConsts.h">
+      <Filter>Graphics\Chunk</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\bin\data\shaders\rectangle.shader">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\somenew.shader">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\standart.shader">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\textRenderer.shader">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3d.frag">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3d.geom">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3d.tesc">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3d.tese">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3d.vert">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\rectangle\shader.frag" />
+    <None Include="..\bin\data\shaders\rectangle\shader.vert" />
+    <None Include="..\bin\data\shaders\textRenderer\shader.frag" />
+    <None Include="..\bin\data\shaders\textRenderer\shader.geom" />
+    <None Include="..\bin\data\shaders\textRenderer\shader.vert" />
+    <None Include="..\bin\data\shaders\3d\3dtexture.frag">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\3d\3dtexture.vert">
+      <Filter>Shaders\3d</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\textRenderer\Text.frag">
+      <Filter>Shaders\textRenderer</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\textRenderer\Text.geom">
+      <Filter>Shaders\textRenderer</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\textRenderer\Text.vert">
+      <Filter>Shaders\textRenderer</Filter>
+    </None>
+    <None Include="Mesh.h">
+      <Filter>Graphics\Mesh</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\chunkRenderer\cr.frag">
+      <Filter>Shaders\chunkRenderer</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\chunkRenderer\cr.vert">
+      <Filter>Shaders\chunkRenderer</Filter>
+    </None>
+    <None Include="..\bin\data\shaders\chunkRenderer\cr.geom">
+      <Filter>Shaders\chunkRenderer</Filter>
+    </None>
+  </ItemGroup>
+</Project>
