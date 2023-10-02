@@ -62,9 +62,9 @@ namespace mge
         }
         Mesh() {}
     };
-    const unsigned int chunk_x = 16;
+    const unsigned int chunk_x = 32;
     const unsigned int chunk_y = 64;
-    const unsigned int chunk_z = 16;
+    const unsigned int chunk_z = 32;
     const unsigned int chunkMaxBlocksSize = chunk_x * chunk_y * chunk_z;
     const unsigned int chunkMeshesSize = (chunkMaxBlocksSize * sizeof(mge::Mesh) * 6);// / 24;
     const unsigned int chunkIndecesCount  = chunkMeshesSize * 6;
