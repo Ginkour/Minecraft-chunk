@@ -1,12 +1,12 @@
 #include "Matrix.h"
 
-void mge::setOrtho(Mat4& mat, float left, float right, float bottom, float top, float zNear, float zFar)
+void mge::setOrtho(Mat4& mat, float left, float right, float bottom, float height, float zNear, float zFar)
 {
 	mat.m_mat[0][0] = 2.f / (right - left);
-	mat.m_mat[1][1] = 2.f / (top - bottom);
+	mat.m_mat[1][1] = 2.f / (height - bottom);
 	mat.m_mat[2][2] = -2.f / (zFar - zNear);
 	mat.m_mat[3][0] = -(right + left) / (right - left);
-	mat.m_mat[3][1] = -(top + bottom) / (top - bottom);
+	mat.m_mat[3][1] = -(height + bottom) / (height - bottom);
 	mat.m_mat[3][2] = -(zFar + zNear) / (zFar - zNear);
 }
 

@@ -22,7 +22,6 @@
 #include <chrono>
 #include "ChunkMesh.h"
 #include <vector>
-
 namespace mge
 {
     inline const std::string getInWidth(float number, const unsigned int widthafterdec) 
@@ -114,6 +113,7 @@ namespace mge
     public:
         void Run()
         {
+            bool flyMode = false;
             mge::Shader d3_triangles("data/shaders/3d/3dtexture.vert", "data/shaders/3d/3dtexture.frag");
 
             mge::Shader textShader("data/shaders/textRenderer/Text.vert", "data/shaders/textRenderer/Text.frag");
@@ -127,7 +127,7 @@ namespace mge
             BlockType* chunkSection = new BlockType[mge::chunkMaxBlocksSize];
             //GENERATE WORLD
             for(unsigned int y = 0; y < chunk_y; ++y)
-                for (unsigned int x = 0; x < chunk_z; ++x)
+                for (unsigned int x = 0; x < chunk_x; ++x)
                     for (unsigned int z = 0; z < chunk_z; ++z)
                     {
                         unsigned int index = y * (chunk_x * chunk_z) + x * chunk_z + z;
@@ -199,17 +199,17 @@ namespace mge
                         }
                     }
             //Generate tree
-            chunkSection[56 * (chunk_x * chunk_z) + 9 * chunk_z + 8] = BlockType::oak_log;
-            chunkSection[57 * (chunk_x * chunk_z) + 9 * chunk_z + 8] = BlockType::oak_log;
-            chunkSection[58 * (chunk_x * chunk_z) + 9 * chunk_z + 8] = BlockType::oak_log;
-            chunkSection[59 * (chunk_x * chunk_z) + 9 * chunk_z + 8] = BlockType::oak_log;
-            chunkSection[59 * (chunk_x * chunk_z) + 9 * chunk_z + 9]  = BlockType::oak_leaves;
-            chunkSection[59 * (chunk_x * chunk_z) + 9 * chunk_z + 7]  = BlockType::oak_leaves;
-            chunkSection[59 * (chunk_x * chunk_z) + 8 * chunk_z + 8]  = BlockType::oak_leaves;
+            chunkSection[56 * (chunk_x * chunk_z) + 9  * chunk_z + 8] = BlockType::oak_log;
+            chunkSection[57 * (chunk_x * chunk_z) + 9  * chunk_z + 8] = BlockType::oak_log;
+            chunkSection[58 * (chunk_x * chunk_z) + 9  * chunk_z + 8] = BlockType::oak_log;
+            chunkSection[59 * (chunk_x * chunk_z) + 9  * chunk_z + 8] = BlockType::oak_log;
+            chunkSection[59 * (chunk_x * chunk_z) + 9  * chunk_z + 9] = BlockType::oak_leaves;
+            chunkSection[59 * (chunk_x * chunk_z) + 9  * chunk_z + 7] = BlockType::oak_leaves;
+            chunkSection[59 * (chunk_x * chunk_z) + 8  * chunk_z + 8] = BlockType::oak_leaves;
             chunkSection[59 * (chunk_x * chunk_z) + 10 * chunk_z + 8] = BlockType::oak_leaves;
-            chunkSection[60 * (chunk_x * chunk_z) + 9 * chunk_z + 8]  = BlockType::oak_leaves;
+            chunkSection[60 * (chunk_x * chunk_z) + 9  * chunk_z + 8] = BlockType::oak_leaves;
 
-            ChunkMesh chunk   (chunkSection, { 0, 0 }, blocks);
+            ChunkMesh chunk(chunkSection, { 0, 0 }, blocks);
             
             std::chrono::high_resolution_clock::time_point end = std::chrono::high_resolution_clock::now();
 

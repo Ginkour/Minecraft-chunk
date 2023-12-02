@@ -13,6 +13,11 @@ namespace mge
     //    solid,
     //    glass
     //};
+
+    const unsigned int chunk_x = 16;
+    const unsigned int chunk_y = 64;
+    const unsigned int chunk_z = 16;
+    constexpr unsigned int maxChunkSize = chunk_x * chunk_y* chunk_z;
     const char* const terrain_path = "data/textures/terrain.png";
     const mge::Vector2u textureUnits = { 16, 16 };
     enum class BlockType           
@@ -177,5 +182,26 @@ namespace mge
         {
             delete terrainAtlas;
         }
+    };
+    class ChunkSection
+    {
+    public:
+        BlockType& at(const unsigned int index)
+        {
+            if (index < maxChunkSize)
+                return m_blocks[index];
+            else
+                return *((BlockType*)0x0000000000000000);
+        }
+        ChunkSection()
+        {
+            m_blocks = new BlockType[chunk_x * chunk_y * chunk_z];
+        }
+        ~ChunkSection()
+        {
+            delete[] m_blocks;
+        }
+    private:
+        BlockType* m_blocks;
     };
 }
