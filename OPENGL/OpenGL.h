@@ -356,12 +356,13 @@ namespace mge
                 // Turn off Z buffer for text Rendering
                 glDisable(GL_DEPTH_TEST);
 
-                //renderer.Draw(fpsstring);
-                //renderer.Draw(frametmstring);
-                //renderer.Draw(xstring);
-                //renderer.Draw(ystring);
-                //renderer.Draw(zstring);
-                //renderer.Draw(chunktmstr);
+                renderer.Draw(fpsstring);
+                renderer.Draw(frametmstring);
+                renderer.Draw(xstring);
+                renderer.Draw(ystring);
+                renderer.Draw(zstring);
+                renderer.Draw(chunktmstr);
+
                 renderer.Display(window);
             }
             delete[]chunkSection;
