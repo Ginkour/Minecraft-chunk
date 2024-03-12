@@ -13,14 +13,14 @@ namespace mge
     };
 
     constexpr float p10_8 = 10.f / 8.f;
-    constexpr float p9_8 = 9.f / 8.f;
-    constexpr float p7_8 = 7.f / 8.f;
-    constexpr float p6_8 = 6.f / 8.f;
-    constexpr float p5_8 = 5.f / 8.f;
-    constexpr float p4_8 = 4.f / 8.f;
-    constexpr float p3_8 = 3.f / 8.f;
-    constexpr float p2_8 = 2.f / 8.f;
-    constexpr float p1_8 = 1.f / 8.f;
+    constexpr float p9_8 = 9.f   / 8.f;
+    constexpr float p7_8 = 7.f   / 8.f;
+    constexpr float p6_8 = 6.f   / 8.f;
+    constexpr float p5_8 = 5.f   / 8.f;
+    constexpr float p4_8 = 4.f   / 8.f;
+    constexpr float p3_8 = 3.f   / 8.f;
+    constexpr float p2_8 = 2.f   / 8.f;
+    constexpr float p1_8 = 1.f   / 8.f;
     constexpr unsigned int atlas_size = 16;
     struct QuadIndeces
     {

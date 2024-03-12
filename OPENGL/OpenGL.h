@@ -191,6 +191,10 @@ namespace mge
                         {
                             chunkSection[index] = BlockType::grass;
                         }
+                        else if (y == 56  && mge::GetRandRangef(0.f, 1.f) > 0.9f)//10% that 56ths level would get moss cobblestone
+                        {
+                            chunkSection[index] = BlockType::moss_cobblestone;
+                        }
                         //if(x == 1 && y == 1 && z == 1)
                         //    world[index] = BlockType::stone;
                         else 
@@ -229,7 +233,7 @@ namespace mge
             renderer.SetClearColor(0.5137f, 0.6431f, 0.8392f, 1.f);
 
 
-
+            BlockType rightHand = BlockType::sand;
             //Create IBO
             //IndexBuffer rectangle_ib(indecies, sizeof(indecies) / sizeof(UINT32));
             mge::Mat4 projectionMatrix(MatPreType::IDEN);
@@ -314,14 +318,23 @@ namespace mge
                     int py = (int)fpy;
                     int pz = (int)fpz;
                     mge::Vector3i ppos = { px, py, pz };
-
+                    if (glfwGetKey(window, GLFW_KEY_1) == GLFW_PRESS)
+                        rightHand = BlockType::stone;
+                    else if (glfwGetKey(window, GLFW_KEY_2) == GLFW_PRESS)
+                        rightHand = BlockType::dirt;
+                    else if (glfwGetKey(window, GLFW_KEY_3) == GLFW_PRESS)
+                        rightHand = BlockType::grass;
+                    else if (glfwGetKey(window, GLFW_KEY_4) == GLFW_PRESS)
+                        rightHand = BlockType::cobblestone;
+                    else if (glfwGetKey(window, GLFW_KEY_5) == GLFW_PRESS)
+                        rightHand = BlockType::moss_cobblestone;
                     if (camera.MOUSE_L)
                     {
                         chunk.deleteBlock({ px, py, pz });
                     }
                     if (camera.MOUSE_R)
                     {
-                        chunk.addBlock({ px, py, pz }, BlockType::pink_wool);
+                        chunk.addBlock({ px, py, pz }, rightHand);
                     }
                 }
                 rotate_frame_speed = rotate_speed * elapsed;
@@ -349,6 +362,7 @@ namespace mge
                 renderer.Draw(ystring);
                 renderer.Draw(zstring);
                 renderer.Draw(chunktmstr);
+
                 renderer.Display(window);
             }
             delete[]chunkSection;

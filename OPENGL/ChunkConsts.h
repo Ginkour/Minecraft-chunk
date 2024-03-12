@@ -28,13 +28,14 @@ namespace mge
         dirt,
         planks,
         cobblestone,
+        moss_cobblestone,
         bedrock,
         sand,
         gravel,
         oak_log,
         oak_leaves,
         diamond_ore,
-        pink_wool
+        pink_wool,
     };
     enum class Instrument
     {
@@ -80,18 +81,19 @@ namespace mge
     };
     const BlockData blocksData[] =
     {
-        { {2, 0}, {0, 0}, {3, 0}, {3, 0}, {3, 0}, {3, 0}, BlockType::grass      , mge::Instrument::shovel,   0.30f},
-        { {1, 0}, {1, 0}, {1, 0}, {1, 0}, {1, 0}, {1, 0}, BlockType::stone      , mge::Instrument::pickaxe,  3.00f},
-        { {2, 0}, {2, 0}, {2, 0}, {2, 0}, {2, 0}, {2, 0}, BlockType::dirt       , mge::Instrument::shovel,   0.25f},
-        { {4, 0}, {4, 0}, {4, 0}, {4, 0}, {4, 0}, {4, 0}, BlockType::planks     , mge::Instrument::axe,      1.00f},
-        { {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, BlockType::cobblestone, mge::Instrument::pickaxe,  3.00f},
-        { {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, BlockType::bedrock    , mge::Instrument::none,     0.10f},
-        { {2, 1}, {2, 1}, {2, 1}, {2, 1}, {2, 1}, {2, 1}, BlockType::sand       , mge::Instrument::shovel,   0.50f},
-        { {3, 1}, {3, 1}, {3, 1}, {3, 1}, {3, 1}, {3, 1}, BlockType::gravel     , mge::Instrument::shovel,   0.50f},
-        { {5, 1}, {5, 1}, {4, 1}, {4, 1}, {4, 1}, {4, 1}, BlockType::oak_log    , mge::Instrument::axe,      1.00f},
-        { {5, 3}, {5, 3}, {5, 3}, {5, 3}, {5, 3}, {5, 3}, BlockType::oak_leaves , mge::Instrument::axe,      0.25f},
-        { {2, 3}, {2, 3}, {2, 3}, {2, 3}, {2, 3}, {2, 3}, BlockType::diamond_ore, mge::Instrument::pickaxe,  5.00f},
-        { {2, 8}, {2, 8}, {2, 8}, {2, 8}, {2, 8}, {2, 8}, BlockType::pink_wool  , mge::Instrument::scissors, 0.50f},
+        { {2, 0}, {0, 0}, {3, 0}, {3, 0}, {3, 0}, {3, 0}, BlockType::grass           , mge::Instrument::shovel,   0.30f},
+        { {1, 0}, {1, 0}, {1, 0}, {1, 0}, {1, 0}, {1, 0}, BlockType::stone           , mge::Instrument::pickaxe,  3.00f},
+        { {2, 0}, {2, 0}, {2, 0}, {2, 0}, {2, 0}, {2, 0}, BlockType::dirt            , mge::Instrument::shovel,   0.25f},
+        { {4, 0}, {4, 0}, {4, 0}, {4, 0}, {4, 0}, {4, 0}, BlockType::planks          , mge::Instrument::axe,      1.00f},
+        { {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, {0, 1}, BlockType::cobblestone     , mge::Instrument::pickaxe,  3.00f},
+        { {4, 2}, {4, 2}, {4, 2}, {4, 2}, {4, 2}, {4, 2}, BlockType::moss_cobblestone, mge::Instrument::pickaxe,  3.00f},
+        { {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, {1, 1}, BlockType::bedrock         , mge::Instrument::none,     0.10f},
+        { {2, 1}, {2, 1}, {2, 1}, {2, 1}, {2, 1}, {2, 1}, BlockType::sand            , mge::Instrument::shovel,   0.50f},
+        { {3, 1}, {3, 1}, {3, 1}, {3, 1}, {3, 1}, {3, 1}, BlockType::gravel          , mge::Instrument::shovel,   0.50f},
+        { {5, 1}, {5, 1}, {4, 1}, {4, 1}, {4, 1}, {4, 1}, BlockType::oak_log         , mge::Instrument::axe,      1.00f},
+        { {5, 3}, {5, 3}, {5, 3}, {5, 3}, {5, 3}, {5, 3}, BlockType::oak_leaves      , mge::Instrument::axe,      0.25f},
+        { {2, 3}, {2, 3}, {2, 3}, {2, 3}, {2, 3}, {2, 3}, BlockType::diamond_ore     , mge::Instrument::pickaxe,  5.00f},
+        { {2, 8}, {2, 8}, {2, 8}, {2, 8}, {2, 8}, {2, 8}, BlockType::pink_wool       , mge::Instrument::scissors, 0.50f},
     };
     constexpr unsigned int blocksCount = sizeof(blocksData) / sizeof(BlockData);
     class TextureRectangle

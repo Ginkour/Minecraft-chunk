@@ -39,9 +39,7 @@ namespace mge
     };
     inline float Absf(float value)
     {
-        unsigned int* val = (unsigned int*)&value;
-        *val &= 0x7FFFFFFF;
-        return value;
+        return *((unsigned int*)&value) & 0x7FFFFFFF;
     }
     mge::UINT32 getDrawType(mge::DrawType dt_tp);
 }
