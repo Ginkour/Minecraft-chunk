@@ -158,6 +158,7 @@
       <EnableEnhancedInstructionSet>AdvancedVectorExtensions2</EnableEnhancedInstructionSet>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
       <CallingConvention>FastCall</CallingConvention>
+      <FloatingPointModel>Fast</FloatingPointModel>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

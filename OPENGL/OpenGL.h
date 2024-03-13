@@ -412,6 +412,7 @@ namespace mge
             logprint("\nGL_MAX_ELEMENTS_VERTICES = %i\n", max);
             glGetIntegerv(GL_MAX_ELEMENTS_INDICES, &max);
             logprint("\nGL_MAX_ELEMENTS_INDICES = %i\n", max);
+            free(iconPixels);
 
         }
         ~OpenGL()

@@ -49,8 +49,8 @@ namespace mge
 	{
 		if (count > 0)
 		{
-			va.Bind();
 			shader.Bind();
+			va.Bind();
 			ib.Bind();
 			GLCall(glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, nullptr));
 		}
